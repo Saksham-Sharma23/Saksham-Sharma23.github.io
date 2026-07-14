@@ -1,0 +1,5 @@
+{
+  "name": "My Portfolio",
+  "description": "A personal portfolio website with a Japanese modern anime animation style, featuring animations with Anime.js and a 3D background with Three.js.",
+  "requestFramePermissions": []
+}
