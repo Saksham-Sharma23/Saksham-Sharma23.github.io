@@ -57,13 +57,18 @@ const ParticleBackground: React.FC = () => {
       scene.add(particles);
     };
 
-    // Static field: no time-based auto-spin. Only a subtle, damped parallax
-    // that eases the camera toward the cursor so it feels alive but calm.
+    // The field always drifts slowly so it never feels frozen when the cursor
+    // is idle, plus a subtle damped parallax that eases the camera toward the
+    // cursor so it also feels interactive.
     const animate = () => {
       frameId = requestAnimationFrame(animate);
 
-      // Responsive parallax: the camera follows the cursor strongly (as in the
-      // original), so the field feels interactive. No constant time-based spin.
+      // Constant gentle rotation keeps the particles moving at all times.
+      particles.rotation.y += 0.0004;
+      particles.rotation.x += 0.0002;
+
+      // Responsive parallax: the camera eases toward the cursor so the field
+      // stays interactive on top of the constant drift.
       camera.position.x += (mouseX - camera.position.x) * 0.05;
       camera.position.y += (-mouseY - camera.position.y) * 0.05;
       camera.lookAt(scene.position);

@@ -3,7 +3,7 @@ import type { Experience } from '../types';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const educationData: Experience[] = [
-    { year: '2022 — 2026', role: 'B.Tech. in Computer Science', company: 'RajKumar Goel Institute of Technology', description: 'CGPA: 8.1. Focused on Data Structures, Algorithms, and Web Technologies.' },
+    { year: '2022 — 2026', role: 'B.Tech. in Computer Science', company: 'RajKumar Goel Institute of Technology', description: 'CGPA: 8.33' },
     { year: '2022', role: 'Higher Secondary (XII)', company: 'Dr. K.N. Modi Global School', description: 'Score: 85%. Science stream with Computer Science.' },
     { year: '2020', role: 'Secondary School (X)', company: 'Dr. K.N. Modi Global School', description: 'Score: 89.6%.' },
 ];
