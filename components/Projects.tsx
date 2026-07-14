@@ -3,19 +3,21 @@ import React from 'react';
 import type { Project } from '../types';
 import ProjectCard from './ProjectCard';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import movieRecommenderImage from './assets/projects/movie_recommender_system.png';
+import ragImage from './assets/projects/RAG.png';
 
 const projectsData: Project[] = [
   {
     title: 'Movie Recommender System',
     description: 'A content-based movie recommendation system suggesting similar movies using plot descriptions, genres, and cast information. Built with Pandas, NumPy, and Scikit-learn.',
-    imageUrl: 'components/assets/projects/movie_recommender_system.png',
+    imageUrl: movieRecommenderImage,
     tags: ['Python', 'Scikit-learn', 'Pandas', 'NumPy'],
     link: 'https://github.com/LLawlietBLANK/Movie-Recommender-System-v1',
   },
   {
     title: 'Smart Research Assistant',
     description: 'An NLP application to automate document summarization and context-aware question answering. Features long-document summarization and deep QA with textual reference extraction.',
-    imageUrl: 'components/assets/projects/RAG.png',
+    imageUrl: ragImage,
     tags: ['NLP', 'FastAPI', 'Streamlit', 'FAISS', 'Transformers'],
     link: 'https://github.com/LLawlietBLANK/Research-Summarizer',
   },
